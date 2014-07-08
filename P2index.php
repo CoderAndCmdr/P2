@@ -4,25 +4,23 @@ ini_set('display_errors', 1);
 */?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>David's xkcd password generator</title>
-	<style>
-	body
-	{
-		text-align: center;
-	}
-    </style>
+	<link rel="stylesheet" type="text/css" href="P2style.css">
 	<?php require 'dictionary.php'; ?>
 	<?php require 'P2logic.php'; ?> 
-
-		
 </head>
 
 <body>
-
+<h1>xkcd Password Generator</h1>
+<p class='password'>
+<?php	
+echo $password_string;
+?>
+</p>
 	<form action='P2index.php' method='POST'>
-
-		<label for='number_of_words'># of Words</label>
+			<label for='number_of_words'># of Words</label>
 		<input type='text' name='number_of_words' id='number of words'
 		       maxlength=1 value=''>
 		<br>
@@ -36,16 +34,11 @@ ini_set('display_errors', 1);
         <input type='checkbox' name='uppercase' id='uppercase'>
         <br>
         <br>
-    <input type='submit' class='btn btn-default' value='Generate Password'>
+	    <input type='submit' class='btn btn-default' value='Generate Password'>
     </form>
-<br>
-<br>
-	
-<p>
-<?php	
-echo $password_string;
-?>
-</p>
-
+	<br>
+	<a href='http://xkcd.com/936/'>
+	<img src='http://imgs.xkcd.com/comics/password_strength.png' alt='xkcd style passwords'>
+	</a>
 </body>
 </html>
