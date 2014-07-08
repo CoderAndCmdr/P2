@@ -32,14 +32,15 @@ ini_set('display_errors', 1);
         <label for ='add_a_symbol'>Add a symbol</label>
         <input type='checkbox' name='add_a_symbol' id='add_a_symbol'>
         <br>
-        <br>
         <label for ='uppercase'>Uppercase first letter</label>
         <input type='checkbox' name='uppercase' id='uppercase'>
+        <br>
         <br>
     <input type='submit' class='btn btn-default' value='Generate Password'>
     </form>
 <br>
 <br>
+	
 <p>
 <?php	
 echo $password_string;

@@ -5,7 +5,7 @@ $password[0] = '';
 
 for ($i=0; $i<$number; $i++)
 {
-	$password[$i] = $words[rand(0,10)];
+	$password[$i] = $dict[rand(0,4999)];
 }
 for ($i=0; $i<$number-1; $i++)
 {
